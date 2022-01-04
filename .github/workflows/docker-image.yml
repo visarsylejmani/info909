@@ -29,6 +29,8 @@ jobs:
       name: Push to GitHub Packages
       uses: docker/build-push-action@v2
       with:
+        secrets: |
+              GIT_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
         context: .
         push: true
         tags: visarsylejmani/info909:latest
