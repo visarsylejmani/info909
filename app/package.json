@@ -1,0 +1,25 @@
+{
+  "name": "info909",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/visarsylejmani/info909.git"
+  },
+  "author": "VS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/visarsylejmani/info909/issues"
+  },
+  "homepage": "https://github.com/visarsylejmani/info909#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mocha": "^9.1.3"
+  }
+}

@@ -1,0 +1,53 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
+        
+    steps:
+    -
+      uses: actions/checkout@v2
+    -
+      name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+    - 
+      name: Install dependencies
+      working-directory: app
+      run: npm ci
+    -
+      name: Build App
+      working-directory: app
+      run: npm run build --if-present
+    -
+      name: Testing App
+      working-directory: app
+      run: npm test
+    - 
+      name: Build the Docker image
+      run: docker build app --file app/Dockerfile --tag info909:latest
+    -
+      name: Push to GitHub Packages
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: info909/app
+        tags: latest
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        registry: docker.pkg.github.com
+        directory: app
+        dockerfile: app/Dockerfile
+
