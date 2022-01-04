@@ -22,7 +22,7 @@ jobs:
       name: Push to GitHub Packages
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: info909
+        image: info909/app
         tags: v1, latest
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
