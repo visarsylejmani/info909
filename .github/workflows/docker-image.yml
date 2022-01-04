@@ -21,6 +21,7 @@ jobs:
     - name: Push to GitHub Packages
       uses: docker/build-push-action@v2
       with:
+        registry: docker.pkg.github.com
         push: true
         tags: visarsylejmani/info909:latest
 
