@@ -24,6 +24,6 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
         registry: docker.pkg.github.com
-        repository: visarsylejmani/click-and-work/click-and-work
+        repository: visarsylejmani/info909/info909
         tag_with_ref: true
 
