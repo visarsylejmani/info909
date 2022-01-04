@@ -13,15 +13,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    
-    - name: Build the Docker image
+    - 
+      uses: actions/checkout@v2
+    - 
+      name: Build the Docker image
       run: docker build . --file Dockerfile --tag info909:latest
-      
-    - name: Push to GitHub Packages
+    -
+      name: Login to DockerHub
+      uses: docker/login-action@v1
+      with:
+        registry: docker.pkg.github.com
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    -
+      name: Push to GitHub Packages
       uses: docker/build-push-action@v2
       with:
-        Registry: docker.pkg.github.com
+        context: .
         push: true
         tags: visarsylejmani/info909:latest
 
