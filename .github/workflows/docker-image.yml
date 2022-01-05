@@ -22,7 +22,6 @@ jobs:
       name: Push to GitHub Packages
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        
         image: info909/app
         tags: latest
         username: ${{ github.actor }}
