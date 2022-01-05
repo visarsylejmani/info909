@@ -6,10 +6,8 @@ GITHUB_USER = config('GITHUB_USER')
 GITHUB_TOKEN = config('GITHUB_TOKEN')
 
 while (True):
-    os.system('echo $(date -u)  "Login to GITHUB_TOKENgithub"')
-    t = f'docker login -u {GITHUB_USER} -p {GITHUB_TOKEN} docker.pkg.github.com'
-    print(t)
-    os.system(t)
+    os.system('echo $(date -u)  "Login to github"')
+    os.system(f'docker login -u {GITHUB_USER} -p {GITHUB_TOKEN} docker.pkg.github.com')
     os.system('echo $(date -u) "Refresh docker images"')
     os.system('docker-compose pull --include-deps')
     os.system('echo $(date -u) "Refresh docker images"')
