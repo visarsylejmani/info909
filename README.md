@@ -16,4 +16,5 @@ GITHUB_USER= <github username>
 GITHUB_TOKEN=<github token>
 ```
 :exclamation: Attention :exclamation:
+
 Assurez vous que le token créer possède les droits de lecture de package
