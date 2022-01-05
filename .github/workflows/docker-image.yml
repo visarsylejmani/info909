@@ -17,14 +17,17 @@ jobs:
       uses: actions/checkout@v2
     - 
       name: Build the Docker image
-      run: docker build . --file Dockerfile --tag info909:latest
+      run: docker build app --file app/Dockerfile --tag info909:latest
     -
       name: Push to GitHub Packages
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
+        
         image: info909/app
         tags: latest
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
         registry: docker.pkg.github.com
+        directory: app
+        dockerfile: app/Dockerfile
 
