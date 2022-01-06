@@ -51,6 +51,10 @@ Dans votre dossier automatisation
 pip install -r requirements.txt
 ```
 
+```bash
+python script.py
+```
+
 ### Etape 2
 
 :exclamation: Attention :exclamation:
