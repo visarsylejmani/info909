@@ -20,7 +20,9 @@ Assurez vous que le token créer possède les droits de lecture de package
 
 :one: Sur github: Settings / Developer settings / Personal access tokens
   - [Clicez ici](https://github.com/settings/tokens "Tokens")
+
 :two: Generate new token
+
 :three: Sélectionnez  read:packages
 
 
