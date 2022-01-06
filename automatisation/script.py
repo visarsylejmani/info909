@@ -19,4 +19,4 @@ while (True):
     os.system('docker image prune -f')
     os.system('docker volume prune -f')
     os.system('echo DONE')
-    time.sleep(300)
+    time.sleep(60)
