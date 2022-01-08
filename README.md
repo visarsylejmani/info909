@@ -36,21 +36,8 @@ git clone <lien du dépôt perso> .
 
 ### Tester la mise en place d'un serveur automatisé en local
 
-#### Etape 1 : Mettre en place un serveur local automatisé
 
-Dans le dossier `automatisation`, on installe les librairies python nécessaires.
-
-```bash
-pip install -r requirements.txt
-```
-
-Puis on peut lancer le script de lancement du serveur :
-
-```bash
-python script.py
-```
-
-#### Etape 2 : Utiliser un token GitHub
+#### Etape 1 : Utiliser un token GitHub
 
 Pour que le serveur soit autorisé à récupérer ce qui est poussé sur le dépôt git, il faut qu'il est des tokens d'accès GitHub
 
@@ -74,4 +61,19 @@ Le fichier devrait ressembler à ça :
 ```
 GITHUB_USER=<github username>
 GITHUB_TOKEN=<github token>
+```
+
+
+#### Etape 2 : Mettre en place un serveur local automatisé
+
+Dans le dossier `automatisation`, on installe les librairies python nécessaires.
+
+```bash
+pip install -r requirements.txt
+```
+
+Puis on peut lancer le script de lancement du serveur :
+
+```bash
+python script.py
 ```
