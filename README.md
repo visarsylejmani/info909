@@ -10,7 +10,7 @@ Docker et Python doivent être installés sur vos machines :
 
 ### Récupération du dépôt git sur son compte
 
-:exclamation: _Attention : on veut faire une **fork** du dépôt et pas juste le cloner, de sorte que chacun puisse faire toutes les manipulations._ :exclamation:
+:exclamation: _Attention : on veut faire un **fork** du dépôt et pas juste le cloner, de sorte que chacun puisse faire toutes les manipulations._ :exclamation:
 
 On commence par faire un fork du dépôt : 
 
@@ -20,7 +20,7 @@ On clique sur le bouton indiqué sur l'image, puis on choisit de faire le fork d
 
 ![image](https://user-images.githubusercontent.com/43339411/148648366-5e7ad2ed-2282-4f09-aa80-430629114c86.png)
 
-On obtient un dépôt similaire que le dépôt original, mais dans ses propres dépôts git : ![image](https://user-images.githubusercontent.com/43339411/148648402-c04e8051-93f9-4857-a609-e1c3c590cf71.png)
+On obtient un dépôt similaire au dépôt original, mais dans ses propres dépôts git : ![image](https://user-images.githubusercontent.com/43339411/148648402-c04e8051-93f9-4857-a609-e1c3c590cf71.png)
 
 On peut ensuite cloner ce dépôt comme d'habitude : 
 
@@ -44,7 +44,7 @@ Pour que le serveur soit autorisé à récupérer ce qui est poussé sur le dép
 ##### Créer un token GitHub
 
 :one: Sur github: Settings / Developer settings / Personal access tokens
-  - [Clicez ici](https://github.com/settings/tokens "Tokens")
+  - [Cliquez ici](https://github.com/settings/tokens "Tokens")
 
 :two: Generate new token
 
