@@ -49,8 +49,11 @@ Pour que le serveur soit autorisé à récupérer ce qui est poussé sur le dép
   - [Cliquez ici](https://github.com/settings/tokens "Tokens")
 
 :two: Generate new token
+
 :exclamation: Attention :exclamation: Assurez-vous que le token créé possède les droits de lecture de package
+
 :three: Sélectionnez  read:packages
+
 ![image](https://user-images.githubusercontent.com/75121454/148825832-205e6f9c-4305-4eaa-9689-4991ee1ce974.png)
 
 
