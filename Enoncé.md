@@ -56,7 +56,7 @@ Le fichier devrait ressembler à ça :
 GITHUB_USER=<github username>
 GITHUB_TOKEN=<github token>
 ```
-
+À noter que le 'github username' doit être écrit en minuscules.
 
 #### Etape 2 : Mettre en place un serveur local automatisé
 
@@ -71,3 +71,4 @@ Puis on peut lancer le script de lancement du serveur :
 ```bash
 python script.py
 ```
+Lorque le script pull une image, il lance automatiquement un conteneur pour l'exécuter (docker doit être lancé sur la machine). La calculatrice est alors accessible en <a href="http://127.0.0.1:8080">127.0.0.1:8080</a>.
