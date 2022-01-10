@@ -35,11 +35,5 @@ app.post('/mul', function (req, res) {
   return res.status(200).send(total)
 })
 
-app.post('/div', function (req, res) {
-  var num1 = parseFloat(req.body.num1)
-  var num2 = parseFloat(req.body.num2)
-  var total = (num1 / num2).toString()
-  return res.status(200).send(total)
-})
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
