@@ -38,8 +38,6 @@ app.post('/mul', function (req, res) {
 app.post('/div', function (req, res) {
   var num1 = parseFloat(req.body.num1)
   var num2 = parseFloat(req.body.num2)
-  if (num2 === 0)
-    return res.status(200).send("Cannot devide by 0")
   var total = (num1 / num2).toString()
   return res.status(200).send(total)
 })
