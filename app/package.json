@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/visarsylejmani/info909#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "ejs" : "^3.1.6"
   }
 }
