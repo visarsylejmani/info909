@@ -66,7 +66,7 @@ Pour que le serveur soit autorisé à récupérer ce qui est poussé sur le dép
 
 ##### Utiliser le token créé
 
-Modifiez le fichier .env dans le répertoire `automatisation`, où se trouve le script
+Créez un fichier .env dans le répertoire `automatisation`, où se trouve le script
 
 Le fichier devrait ressembler à ça :
 
@@ -89,3 +89,28 @@ Puis on peut exécuter le script qui démarre le serveur de l'application (docke
 python script.py
 ```
 Lorque le script pull une image, il lance automatiquement un conteneur pour l'exécuter. La calculatrice est alors accessible en <a href="http://127.0.0.1:8080">127.0.0.1:8080</a>.
+
+### Premier exercice : intégration de la division
+
+Comme vous avez pu le voir, l'application est une calculatrice simple avec l'addition, la soustraction et la multiplication. Ce premier exercice consiste à intégrer une fonctionnalité, la division.
+Il existe donc une branche "division" sur le dépôt git, avec une fonction division et des tests associés déjà mis en place.
+Pour ce premier exercice, créez une pull request de la branche division vers la branche master de **VOTRE** dépôt (attention, par défaut elle sera créée vers le dépôt de base que vous avez fork).
+Depuis github, pouvez-vous repérer pourquoi cette pull request n'est pas valide ? 
+
+Faites ensuite les modifications appropriées pour pouvoir merge la fonctionnalité de division.
+Une fois les changements fusionnés à la branche principal, et si le script python est toujours actif, alors vous devriez pouvoir voir les changements ajoutés automatiquement à l'application (http://127.0.0.1:8080).
+
+### Deuxième exercice : création d'une nouvelle fonctionnalité
+
+Pour cette deuxième activité, le but sera d'ajouter une nouvelle fonctionnalité à la calculatrice : élever un nombre à une puissance choisie. Pour cela, il faudra écrire d'abord le test unitaire de cette fonction, puis implémenter la fonction en tant que telle. Il faudra également modifier l'interface pour pouvoir faire appel à cette fonction !
+N'oubliez pas de créer une branche, afin de pouvoir ensuite réaliser une pull request.
+
+Fichiers concernés :
+Fonction : app/server.js
+Test : app/tests.js
+Interface : app/views/index.ejs
+
+### Troisième exercice : Création d'une branche de développement
+
+Pour cette dernière activité, le but sera de mettre en place une branche "dev" où les pushs déclencheront les tests afin de valider les changements importés. Pour cela, une solution possible est de vous inspirer du fichier ".github/workflows/docker-image.yml" et de créer un nouveau workflow (un nouveau fichier .yml). Dans l'idéal, seuls les tests seront exécutés sur la branche dev (pas la construction de l'image docker).
+Créez la branche dev et mettez en place le lancement automatique des tests sur celle-ci. Vérifiez qu'ils sont bien exécutés à chaque push.
