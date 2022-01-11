@@ -66,7 +66,7 @@ Pour que le serveur soit autorisé à récupérer ce qui est poussé sur le dép
 
 ##### Utiliser le token créé
 
-Modifiez le fichier .env dans le répertoire `automatisation`, où se trouve le script
+Créez un fichier .env dans le répertoire `automatisation`, où se trouve le script
 
 Le fichier devrait ressembler à ça :
 
