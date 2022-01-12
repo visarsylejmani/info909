@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { sub, mul, add, div } = require("../functions");
+const { sub, mul, add, div, pow } = require("../functions");
 describe('Tests unitaire', () => {
     it('should return -3', () => {
         assert.equal(sub(2, 5), '-3');
@@ -15,5 +15,9 @@ describe('Tests unitaire', () => {
     });
     it('should return NaN', () => {
         assert.equal(div(6, 0), 'NaN');
+    });
+
+    it('should return 4', () => {
+        assert.equal(pow(2, 2), '4');
     });
 });

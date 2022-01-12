@@ -16,3 +16,7 @@ exports.div = (num1, num2) => {
     }
     return (num1 / num2).toString();
 }
+
+exports.pow = (num1, num2) => {
+    return (Math.pow(num1, num2)).toString();
+}
