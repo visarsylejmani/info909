@@ -1,4 +1,5 @@
 # INFO909 : Intégration continue - Déploiement continu
+## Kubasik Tom
 
 ## A faire en amont du cours du 12 janvier
 
