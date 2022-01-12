@@ -70,6 +70,26 @@
 				<span class="h2" id="mulres"></span>
 			</div>
 		</div>
+		<hr>
+		<div class="row">
+			<div class="col-3">
+				<input class="form-control" id="div1">
+			</div>
+			<div class="col-1">
+				<div class="w-100 text-center">
+					/
+				</div>
+			</div>
+			<div class="col-3">
+				<input class="form-control" id="div2">
+			</div>
+			<div class="col-2">
+				<button type="button" class="btn btn-primary w-100" onclick="divide()">DIV</button>
+			</div>
+			<div class="col-3">
+				<span class="h2" id="divres"></span>
+			</div>
+		</div>
 
 	</div>
 
@@ -121,6 +141,24 @@
 		}
 		let xhr = new XMLHttpRequest()
 		xhr.open('POST', '/mul', true)
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				res.innerHTML = xhr.responseText
+			}
+		};
+		xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+		xhr.send(JSON.stringify(params))
+	}
+	function divide() {
+		var x = document.getElementById('div1').value
+		var y = document.getElementById('div2').value
+		var res = document.getElementById('divres')
+		var params = {
+			"num1": x,
+			"num2": y
+		}
+		let xhr = new XMLHttpRequest()
+		xhr.open('POST', '/div', true)
 		xhr.onreadystatechange = function () {
 			if (xhr.readyState === 4 && xhr.status === 200) {
 				res.innerHTML = xhr.responseText
